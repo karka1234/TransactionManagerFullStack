@@ -1,16 +1,5 @@
 # Transaction Management Fullstack - Level 3
 
-Below, you'll find the instructions for getting started with your task. Please read them carefully to avoid unexpected issues. Best of luck!
-
-## Time estimate
-
-Around 3 hours, plus the time to set up the codebase.
-
-## Mandatory steps before you get started
-
-1. You should already have your project setup from the coding test start page but if not check out [this guide here](https://help.alvalabs.io/en/articles/9028914-how-to-set-up-the-codebase-for-your-coding-test) for more information.
-2. Learn [how to get help](https://help.alvalabs.io/en/articles/9028899-how-to-ask-for-help-with-coding-tests) if you run into an issue with your coding test.
-
 
 ## The task
 
@@ -345,55 +334,3 @@ The transaction list displays the withdrawn or deposited amount for each transac
 Here's the UI mockup with hints:
 
 ![Accounting App Frontend](https://user-images.githubusercontent.com/450319/139797772-4e4b2744-447c-411f-9b04-7028ba5e89a1.png)
-
-Feel free to tweak the UI, but ensure that the following HTML is in place.
-
-#### The form for submitting transactions
-
-```html
-<form ... >
-  <input data-type="account-id" ... />
-  <input data-type="amount" ... />
-  <input data-type="transaction-submit" type="submit" ... />
-</form>
-```
-
-Both input **fields should be cleared** after the form is submitted.
-
-#### Transaction list
-
-Every new transaction goes on **the top of the list** and should have an enclosing `<div />` with the following structure:
-
-```html
-<div 
-     data-type="transaction"
-     data-account-id="${transaction-account-id}"
-     data-amount="${transaction-amount}"
-     data-balance="${current-account-balance}" ...>
-  ...
-</div>
-```
-
-- `${transaction-account-id}` - account id of the corresponding transaction.
-- `${transaction-amount}` - transaction amount.
-- `${current-account-balance}` - the current account balance right after submitting the transaction (only show for the last submitted transaction).
-
-### Solution expectations
-
-1. Do your best to make the [provided E2E tests](cypress/e2e/test.cy.js) pass. Check out [this tutorial](https://help.alvalabs.io/en/articles/9028831-how-to-work-with-cypress) to learn how to execute these tests and analyze the results.
-2. Keep the server data in memory.
-3. Implement client-side validation of the form data.
-4. Ensure the frontend app remains responsive during data loading from the server.
-5. Unit test one module of choice. There is no need to test the whole app, as we only want to understand what you consider when writing unit tests.
-6. Avoid duplication and extract reusable modules where it makes sense. We want to see your approach to creating a codebase that is easy to maintain.
-
-<!--TASK_INSTRUCTIONS_END-->
-## When you are done
-
-1. [Create a new Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) from the branch where you've committed your solution to the default branch of this repository. **Please do not merge the created Pull Request**.
-2. Go to your application in [Alva Labs](https://app.alvalabs.io) and submit your test.
-
----
-
-Authored by [Alva Labs](https://www.alvalabs.io/).
-
