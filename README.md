@@ -1,7 +1,4 @@
-# Transaction Management Fullstack - Level 3
-
-
-## The task
+# The task
 
 <!--TASK_INSTRUCTIONS_START-->
 Your task is to build a fullstack app that allows the recording of financial transactions and viewing the transaction history.
